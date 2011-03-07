@@ -11,7 +11,7 @@ body, html {
 body {
 	background:#ECE6E0;
 	font: 15px/1.2 Georgia,Verdana,Arial;
-	color: #333;
+	color: #A6876D;
 	}
 
 /*Our full length header.
@@ -37,6 +37,10 @@ If you prefer you could right or left align it.*/
         padding: 20px 40px 20px 40px;
 	}
 
+#container_main {
+        min-height: 400px;
+}
+
 .container_footer {
         background:#FFFFFF;
 	margin:0 auto;
@@ -52,17 +56,17 @@ If you prefer you could right or left align it.*/
 	}
 
 /*These are just styles used for the example for the content.*/
-.left {
-	float:left;
-	width:500px;
+.container_sub_left {
+	width:600px;
 	background:#fff;
 	}
 
-.right {
-	float:left;
+.container_sub_right {
+        float: right;
 	width:200px;
-	clear:right;
 	background:#fff;
+        clear: both;
+        margin-bottom: 30px;
 	}
 
 .left p, .right p {
@@ -108,10 +112,11 @@ section {
   margin-top: 1em;
   font-size: 120%;
   color: #555
+  padding: 10px;
 }
 
 section h1 {
-  font-size: 200%;
+  margin: 0;
 }
 
 /* Links */
@@ -128,6 +133,24 @@ a:hover {
 
 a:visited {
   color: #333;
+}
+
+.info_head {
+  color:white;
+  background-color:#a6876d;
+  padding: 5px 10px 5px 10px;
+  margin: 0;
+}
+
+.info_list {
+    margin: 0px auto;
+    padding: 10px;
+    background-color: #ECE6E0;
+}
+
+.info_list li {
+    list-style-type:none;
+    padding: 5px;
 }
 
 

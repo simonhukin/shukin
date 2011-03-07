@@ -14,10 +14,18 @@
     </div>
     <div class="main">
       <!-- CENTER CONTENT -->
-      <div class="container">
-        <section>
-          <%= yield %>
-        </section>
+      <div class="container" id="container_main">
+        <div class="container_sub_right">
+          <%= render 'layouts/info_right' %>
+        </div>
+        <div class="container_sub_right">
+          <%= render 'layouts/info_right_bottom' %>
+        </div>
+        <div class="container_sub_left">
+          <section>
+            <%= yield %>
+          </section>
+        </div>
       </div>
     </div>
     <!--CLEAR FOOTER TO PREVENT BUNCHING-->
