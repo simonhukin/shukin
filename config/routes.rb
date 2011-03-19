@@ -1,8 +1,15 @@
 Shukin::Application.routes.draw do
+  get "product/new"
+
+  resources :manufacturers
+  resources :products
+
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
-  match '/products', :to => 'pages#products'
+  match '/products_page', :to => 'pages#products_page'
   match '/contact', :to => 'pages#contact'
+  match '/admin', :to => 'pages#admin'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

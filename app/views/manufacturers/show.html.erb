@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @manufacturer.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @manufacturer.image %>
+</p>
+
+<% unless @manufacturer.products.empty? %>
+  <table class="products" summary="Manufacturer products">
+    <%= render @products %>
+  </table>
+  <%= will_paginate @products %>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_manufacturer_path(@manufacturer) %> |
+<%= link_to 'Back', manufacturers_path %>

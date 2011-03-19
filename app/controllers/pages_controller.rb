@@ -9,14 +9,19 @@ class PagesController < ApplicationController
     @current_page = "about"
   end
 
-  def products
+  def products_page
     @title = "Products"
-    @current_page = "products"
+    @current_page = "products_page"
   end
 
   def contact
     @title = "Contact"
     @current_page = "contact"
+  end
+
+  def admin
+    @title = "Admin"
+    @current_page = "admin"
   end
 
 end

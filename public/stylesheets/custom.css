@@ -111,7 +111,7 @@ footer so it doesn't bunch the content up*/
 section {
   margin-top: 1em;
   font-size: 120%;
-  color: #555
+  color: #555;
   padding: 10px;
 }
 
@@ -207,9 +207,8 @@ a:visited {
 }
 
 
-
-#home_page a#home_nav, #about_page a#about_nav, #products_page a#products_nav,
-#contact_page a#contact_nav{
+#home_page a#home_nav, #about_page a#about_nav, #products_page_page a#products_page_nav,
+#contact_page a#contact_nav #admin_page a#admin_nav{
   color: #FFFFFF;
   background-color:#a6876d;
 }
