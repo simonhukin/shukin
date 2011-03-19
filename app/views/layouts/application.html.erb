@@ -24,6 +24,9 @@
         </div>
         <div class="container_sub_left">
           <section>
+            <% flash.each do |key, value| %>
+              <div class="flash <%= key %>"><%= value %></div>
+            <% end %>
             <%= yield %>
           </section>
         </div>
