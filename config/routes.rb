@@ -1,8 +1,13 @@
 Shukin::Application.routes.draw do
+
   get "product/new"
 
   resources :manufacturers
   resources :products
+  resources :users
+
+  match '/signup',  :to => 'users#new'
+
 
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
