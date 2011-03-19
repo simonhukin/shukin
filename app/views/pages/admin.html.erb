@@ -1,4 +1,6 @@
-<%= link_to "Sign up now!", signup_path %>
+<%= render "sessions/sign_in_out" %>
+
+<% if  signed_in? %>
 <table>
   <tr>
     <td>
@@ -9,3 +11,4 @@
     </td>
   </tr>
 </table>
+<% end %>
