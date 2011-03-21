@@ -1,0 +1,10 @@
+<tr>
+  <td class="sub_category">
+    <span class="content"><%= sub_category.name %></span>
+  </td>
+  <td>
+    <%= link_to "delete", sub_category, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => sub_category.name %>
+  </td>
+</tr>

@@ -1,5 +1,7 @@
 Shukin::Application.routes.draw do
 
+  
+
   get "sessions/new"
 
   get "product/new"
@@ -8,6 +10,8 @@ Shukin::Application.routes.draw do
   resources :products
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :categories
+  resources :sub_categories
 
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
