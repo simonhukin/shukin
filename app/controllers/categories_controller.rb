@@ -43,6 +43,9 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(params[:category])
 
+#    @category.sub_categories << SubCategory.new(:name => @category.name)
+     @sub_category = @category.sub_categories.build(:name=>@category.name, :category_id=>Category.last.id)
+
     respond_to do |format|
       if @category.save
         format.html { redirect_to(@category, :notice => 'Category was successfully created.') }

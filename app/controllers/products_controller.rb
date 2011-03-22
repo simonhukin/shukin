@@ -16,6 +16,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @manufacturer = Manufacturer.find(@product.manufacturer_id)
+    @category = Category.find(@product.category_id)
+    @sub_category = SubCategory.find(@product.sub_category_id)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @product }
@@ -29,6 +31,8 @@ class ProductsController < ApplicationController
 
     # fetches all the customers, ordered by their name
     @manufacturers = Manufacturer.order(:name)
+    @categories = Category.order(:name)
+    @sub_categories = SubCategory.order(:name)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,6 +44,8 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @manufacturers = Manufacturer.order(:name)
+    @categories = Category.order(:name)
+    @sub_categories = SubCategory.order(:name)
   end
 
   # POST /products
@@ -47,7 +53,8 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     @manufacturers = Manufacturer.order(:name)
-    
+    @categories = Category.order(:name)
+    @sub_categories = SubCategory.order(:name)
     respond_to do |format|
       if @product.save
         format.html { redirect_to(@product, :notice => 'Product was successfully created.') }
@@ -86,5 +93,6 @@ class ProductsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 
 end

@@ -26,6 +26,15 @@
     <%= f.collection_select :manufacturer_id, @manufacturers, :id, :name, {:prompt => true}, {"style" => "width:200px"} %>
   </div>
 
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, @categories, :id, :name, {:prompt => true}, {"style" => "width:200px"} %>
+  </div>
+
+  <div class="field" id="sub_category_field">
+    <%= f.label :sub_category_id %><br />
+    <%= f.collection_select :sub_category_id, @sub_categories, :id, :name, {:prompt => true}, {"style" => "width:200px"} %>
+  </div>
     
   <div class="actions">
     <%= f.submit %>

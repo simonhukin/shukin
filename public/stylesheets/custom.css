@@ -217,11 +217,12 @@ a:visited {
 table {
     border-collapse: collapse;
     margin: 20px;
+    font-size: 12pt;
 }
 th, td {
     vertical-align: text-top;
     border-bottom: 1px solid #FFFFFF;
     border-top: 4px solid #AABCFE;
     color: #003399;
-    padding: 8px;
+    padding: 2px;
 }
