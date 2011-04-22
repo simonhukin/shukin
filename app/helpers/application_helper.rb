@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def logo
-    @logo = image_tag("logo.gif", :alt => "S.Hukin ltd")
+    @logo = image_tag("masthead_V1.0.png", :alt => "S.Hukin ltd")
   end
 
   def logo_icon
@@ -14,6 +14,14 @@ module ApplicationHelper
 
   def photo_old
     @photo_old = image_tag("shukin.jpg", :alt => "S.Hukin founder - Samuel Hukin c1934")
+  end
+
+  def photo_spring
+    @photo_spring = image_tag("spring-storm.jpg", :alt => "Fields")
+  end
+
+  def eight_across_digital_logo
+    @eight_across_digital_logo = image_tag("8ad_logo.png", :alt => "eight across digital")
   end
 
   #return a title on a per page basis

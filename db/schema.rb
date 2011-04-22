@@ -10,10 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110322001108) do
+ActiveRecord::Schema.define(:version => 20110328035605) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "enquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20110322001108) do
   end
 
   add_index "products", ["manufacturer_id"], :name => "index_products_on_manufacturer_id"
+
+  create_table "quotes", :force => true do |t|
+    t.integer  "enquiry_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "quotes", ["enquiry_id"], :name => "index_quotes_on_enquiry_id"
+  add_index "quotes", ["product_id"], :name => "index_quotes_on_product_id"
 
   create_table "sub_categories", :force => true do |t|
     t.string   "name"

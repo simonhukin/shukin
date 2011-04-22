@@ -9,8 +9,8 @@ body, html {
 
 /*Just visual styles*/
 body {
-	background:#ECE6E0;
-	font: 15px/1.2 Georgia,Verdana,Arial;
+background: url(../images/bg-paperOnly.jpg) top left repeat;
+	font: 15px/1.2 Gautami,Georgia,Verdana,Arial;
 	color: #A6876D;
 	}
 
@@ -18,22 +18,29 @@ body {
 We align the text center so it shows up in the middle.
 If you prefer you could right or left align it.*/
 .header {
-	background:#ECE6E0;
+
 	padding:20px 40px 0px 40px;
-        height: 190px;
-        min-width: 800px;
+        height: 270px;
+        min-width: 900px;
 	}
 
  .main {
-	background:#ECE6E0;
-        min-width: 800px;
+        min-width: 900px;
 	}
 
 /*Center Content*/
-.container {
-        background:#FFFFFF;
+.container_head {
+    background: url(../images/tear_top.png) #fff repeat-x;
+    background-color: #fff;
 	margin:0 auto;
-	width:800px;
+	width:900px;
+        padding: 20px 40px 20px 40px;
+	}
+
+.container_main {
+    background-color: #fff;
+	margin:0 auto;
+	width:900px;
         padding: 20px 40px 20px 40px;
 	}
 
@@ -42,22 +49,21 @@ If you prefer you could right or left align it.*/
 }
 
 .container_footer {
-        background:#FFFFFF;
+background-color: #fff;
 	margin:0 auto;
-	width:800px;
+	width:900px;
         padding: 20px 40px 20px 40px;
         text-align: left;
 	}
 
 /*Full width footer*/
 .footer {
-	background:#ECE6E0;
 	text-align:center;
 	}
 
 /*These are just styles used for the example for the content.*/
 .container_sub_left {
-	width:600px;
+	width:650px;
 	background:#fff;
 	}
 
@@ -77,11 +83,13 @@ If you prefer you could right or left align it.*/
 footer so it doesn't bunch the content up*/
 .clear {clear:both;}
 
-.header img {
-  padding: 1em;
-  background: #fff;
+img {
   outline: 0 none;
   border: 0px;
+}
+
+.header img {
+  padding-bottom: 1em;
 }
 
 #fb_footer img {
@@ -96,6 +104,10 @@ footer so it doesn't bunch the content up*/
     clear: right;
 }
 
+#eightacross_footer{
+    float: right;
+}
+
 #blog_footer {
     padding: 10px;
     float: left;
@@ -104,8 +116,8 @@ footer so it doesn't bunch the content up*/
 }
 
 #copy_footer {
-    border-top: 6px solid #BDA693;
-    padding: 20px 10px 10px 10px;
+    background: url(../images/concept_bg_V1.gif) top left repeat-x;
+    padding: 40px 10px 10px 10px;
 }
 
 section {
@@ -136,8 +148,8 @@ a:visited {
 }
 
 .info_head {
-  color:white;
-  background-color:#a6876d;
+  color:#777;
+  border-bottom: solid 3px #ddd;
   padding: 5px 10px 5px 10px;
   margin: 0;
 }
@@ -145,7 +157,8 @@ a:visited {
 .info_list {
     margin: 0px auto;
     padding: 10px;
-    background-color: #ECE6E0;
+    background-color: #fff;
+	border-bottom: solid 1px #c7ed37;
 }
 
 .info_list li {
@@ -157,8 +170,8 @@ a:visited {
 /* Navigation */
 
 .nav {
-  height:2.7em;
-  line-height:2.7em;
+  height:50px;
+  line-height:54px;
 }
 
 .nav ul {
@@ -167,62 +180,109 @@ a:visited {
 }
 
 .nav li {
-  float:left;
+  float:right;
   margin:0;
   padding:0;
   list-style-type:none;
-  border-right:1px solid;
+  border-left:3px solid;
   white-space:nowrap;
 }
 
 .nav li a {
   display:block;
   padding:0 18px;
-  font-size:0.8em;
-  text-transform:uppercase;
+  font-size:1.8em;
   letter-spacing:1px;
 }
 
-.nav {background-color:#bda693;}
+.nav {background: url(../images/concept_bg_V1.gif) top left repeat;}
 
 .nav li {border-color:white;}
 
 .nav a {color:white;}
 
 .nav .selected
-{background-color:#a6876d}
+{}
 .nav a:hover
-  {background-color:#a6876d}
+  {}
 
 .nav form {
   border-color:white;
-  background:#DCDDDE url(images/onef/corner_bottom_right.gif) bottom right no-repeat;
+  background:#DCDDDE url(../images/onef/corner_bottom_right.gif) bottom right no-repeat;
 }
 
-.nav #s {border-color:#FFF9EA;}
+.nav #s {;}
 
 .nav .searchbutton {
   color:white;
-  background-color:#a6876d;
+
 }
 
 
 #home_page a#home_nav, #about_page a#about_nav, #products_page_page a#products_page_nav,
 #contact_page a#contact_nav #admin_page a#admin_nav{
-  color: #FFFFFF;
-  background-color:#a6876d;
+  font-weight: bold;
+
 }
 
 
 table {
     border-collapse: collapse;
     margin: 20px;
-    font-size: 12pt;
+    font-size: 15px;
 }
 th, td {
     vertical-align: text-top;
     border-bottom: 1px solid #FFFFFF;
-    border-top: 4px solid #AABCFE;
-    color: #003399;
+    border-top: 2px solid #C7ED37;
+    color: #A6876D;
     padding: 2px;
+}
+
+.product_browse {
+   width: 100%;
+}
+
+
+cat_nav {
+}
+
+.cat_nav ul {
+  margin:0;
+  padding:0;
+}
+
+.cat_nav li {
+  float:left;
+  margin:2px;
+  padding:2px 3px 0px 3px;
+  list-style-type:none;
+  border: solid 1px #C7ED37;
+  white-space:nowrap;
+}
+
+.cat_nav li a {
+  display:block;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.cat_nav a:hover
+  {}
+
+  .clear {
+      clear:both;
+}
+
+.selected a {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.selected li {
+  background-color: #000;
+}
+
+#selected li {
+  background-color: #000;
 }

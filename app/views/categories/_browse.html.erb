@@ -1,0 +1,8 @@
+<div class="cat_nav">
+  <ul id="<%= @current_cat.id %>_cat">
+    <% @categories.each do |category| %>
+      <li <%= @current_cat == category ? "class='selected'":""  %> ><%= link_to category.name, products_page_path(:id => category.id), :id => category.id %></li>
+    <% end %>
+
+  </ul>
+</div>

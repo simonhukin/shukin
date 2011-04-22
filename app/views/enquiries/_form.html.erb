@@ -1,0 +1,72 @@
+<%= form_for(@enquiry) do |f| %>
+  <% if @enquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enquiry.errors.count, "error") %> prohibited this enquiry from being saved:</h2>
+
+      <ul>
+      <% @enquiry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </div>
+
+  <div>
+    <%#= f.fields_for :product do |product_form| %>
+      <%#= product_form.check_box_tag "enquiry[product_ids][]", product.id, @enquiry.product_ids.include?(product.id)%>
+      <%#= product.name %>
+    <%# end %>
+
+
+  <table>
+    <%Product.all.each_with_index do |product, index|%>
+      <tr>
+        <td>
+          <%= check_box_tag "enquiry[product_ids][]", product.id, @enquiry.product_ids.include?(product)%>
+          <%= product.name %>
+        </td>
+        <td>
+          <%= product.pack %>
+        </td>
+        <td>
+          <%= product.manufacturer.name %>
+        <%# q = product.quotes.find_by_enquiry_id(@enquiry) || product.quotes.build %>
+        <%# fields_for "enquiry[quote_attributes][]", q do |qf| %>
+          <%#= text_field_tag("enquiry[quote_quantity][][]") %>
+        <%# end %>
+        </td>
+        <td>
+          <%= product.category.name %>
+        </td>
+        <td>
+          <%= product.sub_category.name %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -4,6 +4,11 @@
   Culpitt, Puratos, Macphie, Bradshaws, Morley, Britannia, Ingram,
   Surafti, Tate & Lyle and many more.
 </p>
+
+  <%= render 'categories/browse' %>
+
+<div class="clear"></div>
 <p>
-  Here is a list of our product ranges:
+  Products in our <%= @current_cat.name%> range:
+  <%= render 'products/browse' %>
 </p>

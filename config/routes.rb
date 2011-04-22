@@ -1,5 +1,9 @@
 Shukin::Application.routes.draw do
 
+  resources :enquiries do
+    resources :quotes
+  end
+
   match ':controller/:action.:format'
 
   get "sessions/new"

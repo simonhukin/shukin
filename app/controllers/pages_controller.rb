@@ -12,6 +12,16 @@ class PagesController < ApplicationController
   def products_page
     @title = "Products"
     @current_page = "products_page"
+
+    @categories = Category.all
+    
+    if params[:id].blank?
+      @products = Product.all.paginate(:page => params[:page])
+    else
+      @products = Product.find_all_by_category_id(params[:id]).paginate(:page => params[:page])
+      @current_cat = Category.find_by_id(params[:id]);
+    end  
+
   end
 
   def contact
