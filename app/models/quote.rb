@@ -4,8 +4,6 @@ class Quote < ActiveRecord::Base
   belongs_to :enquiry
   belongs_to :product
 
-  accepts_nested_attributes_for :products
-
   after_create :ac_callback
 
   private
