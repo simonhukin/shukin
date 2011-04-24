@@ -24,6 +24,10 @@ module ApplicationHelper
     @eight_across_digital_logo = image_tag("8ad_logo.png", :alt => "eight across digital")
   end
 
+  def customer_services
+    @customer_services = image_tag("contact_us.png", :alt => "Customer Services: +44 (0)114 2551397", :id => "customer_services");
+  end
+
   #return a title on a per page basis
   def title
     base_title = "S.Hukin ltd"

@@ -19,8 +19,8 @@ class PagesController < ApplicationController
       @products = Product.all.paginate(:page => params[:page])
     else
       @products = Product.find_all_by_category_id(params[:id]).paginate(:page => params[:page])
-      @current_cat = Category.find_by_id(params[:id]);
-    end  
+      @current_cat = Category.find_by_id(params[:id])
+    end
 
   end
 

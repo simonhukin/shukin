@@ -45,7 +45,7 @@ If you prefer you could right or left align it.*/
 	}
 
 #container_main {
-        min-height: 400px;
+        min-height: 440px;
 }
 
 .container_footer {
@@ -124,11 +124,13 @@ section {
   margin-top: 1em;
   font-size: 120%;
   color: #555;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 0px;
 }
 
 section h1 {
-  margin: 0;
+  margin: 0px;
+  padding-top: 0px;
 }
 
 /* Links */
@@ -244,7 +246,10 @@ th, td {
 }
 
 
-cat_nav {
+.cat_nav {
+    margin: 0px;
+    padding: 0px;
+
 }
 
 .cat_nav ul {
@@ -253,12 +258,12 @@ cat_nav {
 }
 
 .cat_nav li {
-  float:left;
   margin:2px;
   padding:2px 3px 0px 3px;
   list-style-type:none;
   border: solid 1px #C7ED37;
   white-space:nowrap;
+  display: inline-block;
 }
 
 .cat_nav li a {
@@ -270,8 +275,9 @@ cat_nav {
 .cat_nav a:hover
   {}
 
-  .clear {
-      clear:both;
+.clear {
+    clear: both !important;
+    height: inherit !important;
 }
 
 .selected a {
@@ -285,4 +291,8 @@ cat_nav {
 
 #selected li {
   background-color: #000;
+}
+
+#customer_services {
+    margin-left: -35px;
 }

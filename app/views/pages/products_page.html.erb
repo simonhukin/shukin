@@ -5,10 +5,9 @@
   Surafti, Tate & Lyle and many more.
 </p>
 
-  <%= render 'categories/browse' %>
+<%= render 'categories/browse' %>
 
-<div class="clear"></div>
 <p>
-  Products in our <%= @current_cat.name%> range:
+  Products in our <%= @current_cat.blank? ? "whole" : @current_cat.name%> range:
   <%= render 'products/browse' %>
 </p>
