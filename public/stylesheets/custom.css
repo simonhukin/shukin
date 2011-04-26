@@ -45,7 +45,7 @@ If you prefer you could right or left align it.*/
 	}
 
 #container_main {
-        min-height: 440px;
+        min-height: 600px;
 }
 
 .container_footer {
@@ -131,6 +131,8 @@ section {
 section h1 {
   margin: 0px;
   padding-top: 0px;
+  color: #999999;
+  border-bottom: 3px solid #C7ED37;
 }
 
 /* Links */
@@ -222,9 +224,22 @@ a:visited {
 
 
 #home_page a#home_nav, #about_page a#about_nav, #products_page_page a#products_page_nav,
-#contact_page a#contact_nav #admin_page a#admin_nav{
+#contact_page a#contact_nav, #admin_page a#admin_nav{
   font-weight: bold;
 
+}
+
+a#home_nav {
+  width: 70px;
+}
+a#about_nav {
+  width: 73px;
+}
+a#products_page_nav {
+  width: 108px;
+}
+a#contact_nav {
+  width: 97px;
 }
 
 
@@ -272,7 +287,33 @@ th, td {
   letter-spacing:1px;
 }
 
-.cat_nav a:hover
+.sup_cat_nav {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.sup_cat_nav ul {
+  margin:0;
+  padding:0;
+}
+
+.sup_cat_nav li {
+  margin:2px;
+  padding:2px 3px 0px 3px;
+  list-style-type:none;
+  border: solid 1px #C7ED37;
+  white-space:nowrap;
+  display: inline-block;
+  text-align: center;
+}
+
+.sup_cat_nav li a {
+  display:block;
+  width: 200px;
+}
+
+sup_ a:hover
   {}
 
 .clear {
@@ -294,5 +335,6 @@ th, td {
 }
 
 #customer_services {
-    margin-left: -35px;
+    margin-left: 5px;
+    padding-left: 5px;
 }

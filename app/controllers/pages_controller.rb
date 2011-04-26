@@ -22,6 +22,12 @@ class PagesController < ApplicationController
       @current_cat = Category.find_by_id(params[:id])
     end
 
+    if params[:sup_cat_name].blank?
+      @sup_cat_name = "whole"
+    else
+      @sup_cat_name = params[:sup_cat_name]
+    end
+
   end
 
   def contact

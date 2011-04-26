@@ -2,6 +2,7 @@
   <tr>
     <th>Name</th>
     <th>Pack</th>
+    <th>Category</th>
     <th>Manufacturer</th>
   </tr>
 <%= will_paginate @products %>
@@ -10,6 +11,7 @@
   <tr>
     <td><%= product.name %></td>
     <td><%= product.pack %></td>
+    <td><%= product.category.name %></td>
     <td><%= product.manufacturer.name %></td>
   </tr>
 <% end %>

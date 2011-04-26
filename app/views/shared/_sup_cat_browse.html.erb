@@ -1,0 +1,32 @@
+<div class="sup_cat_nav">
+  <ul>
+    <li <%= @sup_cat_nav == "baking" ? "class='selected'":""  %>>
+      <%= link_to "Baking", products_page_path(:id => $baking_categories, :sup_cat_name => "baking") %>
+    </li>
+    <li <%= @sup_cat_nav == "dairy" ? "class='selected'":""  %>>
+      <%= link_to "Dairy", products_page_path(:id => $dairy_categories, :sup_cat_name => "dairy") %>
+    </li>
+    <li <%= @sup_cat_nav == "decorating" ? "class='selected'":""  %>>
+      <%= link_to "Decorating", products_page_path(:id => $decorating_categories, :sup_cat_name => "decorating") %>
+    </li>
+    <li <%= @sup_cat_nav == "fats & oils" ? "class='selected'":""  %>>
+      <%= link_to "Fats & Oils", products_page_path(:id => $fats_oils_categoies, :sup_cat_name => "fats & oils") %>
+    </li>
+    <li <%= @sup_cat_nav == "fruit & nuts" ? "class='selected'":""  %>>
+      <%= link_to "Fruit & Nuts", products_page_path(:id => $fruit_nuts_categoies, :sup_cat_name => "fruit & nuts") %>
+    </li>
+    <li <%= @sup_cat_nav == "non edible" ? "class='selected'":""  %>>
+      <%= link_to "Non Edible", products_page_path(:id => $non_edible_categoies, :sup_cat_name => "non edible") %>
+    </li
+    <li <%= @sup_cat_nav == "other consumables" ? "class='selected'":""  %>>
+      <%= link_to "Other Consumables", products_page_path(:id => $other_consumables_categoies, :sup_cat_name => "other consumables") %>
+    </li>
+    <li <%= @sup_cat_nav == "savoury" ? "class='selected'":""  %>>
+      <%= link_to "Savoury", products_page_path(:id => $savoury_categoies, :sup_cat_name => "savoury") %>
+    </li>
+    <li <%= @sup_cat_nav == "sweet" ? "class='selected'":""  %>>
+      <%= link_to "Sweet", products_page_path(:id => $sweet_categoies, :sup_cat_name => "sweet") %>
+    </li>
+
+  </ul>
+</div>

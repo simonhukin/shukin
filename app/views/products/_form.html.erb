@@ -16,6 +16,11 @@
     <%= f.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= f.label :pack %><br />
+    <%= f.text_field :pack %>
+  </div>
+
   <%# f.fields_for :manufacturers do |m| %>
     <%#= m.collection_select(:manufacturer_id, Manufacturer.all, :id, :name) %>
   <%# end %>
