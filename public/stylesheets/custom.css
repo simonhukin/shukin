@@ -45,7 +45,7 @@ If you prefer you could right or left align it.*/
 	}
 
 #container_main {
-        min-height: 600px;
+        min-height:500px;
 }
 
 .container_footer {
@@ -174,7 +174,7 @@ a:visited {
 
 .nav {
   height:50px;
-  line-height:54px;
+  line-height:50px;
 }
 
 .nav ul {
@@ -226,6 +226,7 @@ a:visited {
 #home_page a#home_nav, #about_page a#about_nav, #products_page_page a#products_page_nav,
 #contact_page a#contact_nav, #admin_page a#admin_nav{
   font-weight: bold;
+  background-image: url(../images/shade.png);
 }
 
 a#home_nav {
