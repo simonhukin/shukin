@@ -17,7 +17,7 @@
     </li>
     <li <%= @sup_cat_name == "non edible" ? "class='selected'":""  %>>
       <%= link_to "Non Edible", products_page_path(:id => $non_edible_categoies, :sup_cat_name => "non edible") %>
-    </li
+    </li>
     <li <%= @sup_cat_name == "other consumables" ? "class='selected'":""  %>>
       <%= link_to "Other Consumables", products_page_path(:id => $other_consumables_categoies, :sup_cat_name => "other consumables") %>
     </li>

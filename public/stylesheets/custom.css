@@ -134,6 +134,13 @@ section h1 {
   border-bottom: 3px solid #C7ED37;
 }
 
+section h2 {
+  color:#999999;
+  border-bottom: solid 3px #ddd;
+  padding-top: 0px;
+  margin: 0px;
+}
+
 /* Links */
 
 a {
@@ -312,7 +319,7 @@ td {
   white-space:nowrap;
   display: inline-block;
   text-align: center;
-  background-color: #AFAFAF;
+  background-color: #CCC;
 }
 
 .sup_cat_nav li a {
@@ -325,6 +332,7 @@ td {
 sup_cat_nav a:hover
 {
     color: #ffffff;
+    background-color: #ddd;
 }
 
 
