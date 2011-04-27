@@ -21,7 +21,7 @@
     <td><%= enquiry.message %></td>
     <td><%= link_to 'Show', enquiry %></td>
     <td><%= link_to 'Edit', edit_enquiry_path(enquiry) %></td>
-    <td><%= link_to 'Destroy', enquiry, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to "delete", enquiry, :method => :delete, :confirm => "Are you sure?", :class => :destroy %></td>
   </tr>
 <% end %>
 </table>
