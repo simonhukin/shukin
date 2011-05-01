@@ -252,22 +252,23 @@ a#contact_nav {
 
 table {
     border-collapse: collapse;
-    margin: 20px;
+    margin-top: 20px;
     font-size: 15px;
 }
 
 th {
+    text-align: left;
     vertical-align: text-top;
     border-bottom: 3px solid #DDDDDD;
-    color: #505050;
-    padding: 2px;
+    color: #999999;
+    padding: 2px 10px 6px 10px;
 }
 
 td {
     vertical-align: text-top;
     border-bottom: 1px solid #C7ED37;
     color: #505050;
-    padding: 2px;
+    padding: 2px 2px 2px 10px;
 }
 
 .product_browse {
@@ -313,20 +314,21 @@ td {
 }
 
 .sup_cat_nav li {
-  margin:2px;
-  padding:4px;
+  margin:2px 0px 2px 1px;
   list-style-type:none;
   white-space:nowrap;
   display: inline-block;
   text-align: center;
-  background-color: #CCC;
+  background-color: #eee;
+  background: url(../images/concept_bg_V1.gif) top left repeat;
 }
 
 .sup_cat_nav li a {
-  color: #ffffff;
+  color: #fff;
   display:block;
-  width: 200px;
+  width: 205px;
   font-weight: bold;
+  padding: 4px;
 }
 
 sup_cat_nav a:hover
@@ -336,14 +338,15 @@ sup_cat_nav a:hover
 }
 
 
-.selected a {
+.selected a{
     font-weight: bold;
     font-size: 14px;
-    background-color: #C7ED37;
+    background-image: url(../images/shade.png);
 }
 
 li.selected {
   background-color: #C7ED37;
+  color: #fff;
 }
 
 #customer_services {
@@ -355,11 +358,30 @@ li.selected {
     text-align: center;
     overflow: auto;
     width: 100%;
+    height: 25px;
+    margin-top: 5px;
 }
 
-.pagination a, em{
-    padding: 5px;
+.pagination a{
+    background: none repeat scroll 0 0 #EEEEEE;
+    padding: 3px 7px 4px 7px;
+    min-width: 20px;
 }
+
+.pagination span{
+    color: #ccc;
+    background: none repeat scroll 0 0 #f7f7f7;
+    padding: 3px 7px 4px 7px;
+    min-width: 20px;
+}
+.pagination em{
+    color: #ccc;
+    background: none repeat scroll 0 0 #f7f7f7;
+    padding: 3px 7px 2px 7px;
+    min-width: 20px;
+    border-bottom: solid 2px #999;
+}
+
 
 .previous_page {
     float:left;
