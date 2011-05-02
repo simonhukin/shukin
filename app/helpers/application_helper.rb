@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def logo
-    @logo = image_tag("masthead_V1.0.png", :alt => "S.Hukin ltd")
+    @logo = image_tag("masthead_V1.0_reflection.png", :alt => "S.Hukin ltd")
   end
 
   def logo_icon
