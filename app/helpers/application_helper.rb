@@ -16,8 +16,8 @@ module ApplicationHelper
     @photo_old = image_tag("shukin.jpg", :alt => "S.Hukin founder - Samuel Hukin c1934")
   end
 
-  def photo_spring
-    @photo_spring = image_tag("spring-storm.jpg", :alt => "Fields")
+  def photo_bread
+    @photo_bread = image_tag("bread_V2.0.jpg", :alt => "Bread")
   end
 
   def eight_across_digital_logo

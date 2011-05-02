@@ -52,7 +52,7 @@ If you prefer you could right or left align it.*/
 background-color: #fff;
 	margin:0 auto;
 	width:900px;
-        padding: 20px 40px 20px 40px;
+        padding: 0px 40px 20px 40px;
         text-align: left;
 	}
 
@@ -72,7 +72,7 @@ background-color: #fff;
 	width:200px;
 	background:#fff;
         clear: both;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 	}
 
 .left p, .right p {
@@ -356,7 +356,6 @@ li.selected {
 
 .pagination {
     text-align: center;
-    overflow: auto;
     width: 100%;
     height: 25px;
     margin-top: 5px;
