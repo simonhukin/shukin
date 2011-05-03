@@ -1,4 +1,5 @@
 class EnquiriesController < ApplicationController
+  before_filter :authenticate
   # GET /enquiries
   # GET /enquiries.xml
   def index
@@ -88,4 +89,10 @@ class EnquiriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
 end

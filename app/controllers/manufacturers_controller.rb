@@ -1,4 +1,6 @@
 class ManufacturersController < ApplicationController
+  before_filter :authenticate
+
   # GET /manufacturers
   # GET /manufacturers.xml
   def index
@@ -80,4 +82,10 @@ class ManufacturersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
 end

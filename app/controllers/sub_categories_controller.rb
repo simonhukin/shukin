@@ -1,5 +1,6 @@
 class SubCategoriesController < ApplicationController
- # GET /sub_categories
+  before_filter :authenticate
+  # GET /sub_categories
   # GET /sub_categories.xml
   def index
     @sub_categories = SubCategory.all
@@ -85,5 +86,11 @@ class SubCategoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
 
 end

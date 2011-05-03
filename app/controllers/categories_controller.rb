@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :authenticate
   # GET /categories
   # GET /categories.xml
   def index
@@ -84,4 +85,10 @@ class CategoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
 end

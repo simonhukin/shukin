@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+before_filter :authenticate
 
   # GET /products
   # GET /products.xml
@@ -95,5 +96,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
 
 end
