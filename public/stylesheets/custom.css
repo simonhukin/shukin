@@ -19,7 +19,7 @@ We align the text center so it shows up in the middle.
 If you prefer you could right or left align it.*/
 .header {
 
-	padding:20px 40px 0px 40px;
+	padding-top: 20px;
         height: 270px;
         min-width: 900px;
 	}
@@ -326,7 +326,7 @@ td {
 .sup_cat_nav li a {
   color: #fff;
   display:block;
-  width: 205px;
+  width: 204px;
   font-weight: bold;
   padding: 4px;
 }
