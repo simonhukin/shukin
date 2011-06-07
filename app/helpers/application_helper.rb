@@ -28,6 +28,14 @@ module ApplicationHelper
     @customer_services = image_tag("contact_us_nl.png", :alt => "Customer Services: +44 (0)114 2551397", :id => "customer_services");
   end
 
+  def tick
+    @tick = image_tag("tick.png", :alt => "tick");
+  end
+
+  def main_pic
+    @main_pic = image_tag("main_pic.jpg", :alt => "Supplying local businesses with quality produce since 1874. We deliver to your door 7 days a week. Get in touch to find out more about our products and services", :class => "main_pic");
+  end
+
   #return a title on a per page basis
   def title
     base_title = "S.Hukin ltd"
