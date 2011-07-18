@@ -29,11 +29,11 @@ module ApplicationHelper
   end
 
   def tick
-    @tick = image_tag("tick.png", :alt => "tick");
+    @tick = image_tag("tick.png", :alt => "wholesale quality produce");
   end
 
   def main_pic
-    @main_pic = image_tag("main_pic.jpg", :alt => "Supplying local businesses with quality produce since 1874. We deliver to your door 7 days a week. Get in touch to find out more about our products and services", :class => "main_pic");
+    @main_pic = image_tag("main_pic_2.0.jpg", :alt => "Supplying local businesses with quality produce since 1874. We deliver to your door 7 days a week. Get in touch to find out more about our products and services", :class => "main_pic");
   end
 
   #return a title on a per page basis
