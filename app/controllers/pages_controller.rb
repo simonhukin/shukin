@@ -14,8 +14,10 @@ class PagesController < ApplicationController
     @current_page = "products_page"
 
     @categories = Category.all
-    
-    if params[:id].blank?
+
+    if !params[:search].blank?
+      @products = Product.search(params[:search]).paginate(:page => params[:page])
+    else if params[:id].blank? && params[:search].blank?
       @products = Product.all.paginate(:page => params[:page])
     else
       @products = Product.find_all_by_category_id(params[:id]).paginate(:page => params[:page])
@@ -28,6 +30,8 @@ class PagesController < ApplicationController
       @sup_cat_name = params[:sup_cat_name]
     end
 
+    end
+  
   end
 
   def contact

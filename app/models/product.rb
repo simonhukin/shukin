@@ -14,4 +14,16 @@ class Product < ActiveRecord::Base
   validates :sub_category_id, :presence => true
 
   default_scope :order => 'products.name ASC'
+
+  def self.search(search)
+    if search
+     find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+     # find(:all, :conditions => ['name LIKE :search OR category_id LIKE :search OR manufacturer_id LIKE :search', {:search => "%#{search}%"}])
+
+    else
+      find(:all)
+    end
+  end
+
+
 end

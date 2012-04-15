@@ -1,5 +1,6 @@
 <h2 class="info_head">
-  Products
+  Products<br/>
+  <%= render 'shared/product_search' %>
 </h2>
 <ul class="info_list">
   <li><%= link_to tick, products_page_path(:id => $baking_categories, :sup_cat_name => "baking") %> <%= link_to "Baking", products_page_path(:id => $baking_categories, :sup_cat_name => "baking") %></li>
