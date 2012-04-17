@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def customer_services
-    @customer_services = image_tag("contact_us_nl.png", :alt => "Customer Services: +44 (0)114 2551397", :id => "customer_services");
+    @customer_services = image_tag("contact_us_nl2.png", :alt => "Customer Services: +44 (0)114 2551397", :id => "customer_services");
   end
 
   def tick
