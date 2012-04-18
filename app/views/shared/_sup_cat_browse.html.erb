@@ -18,14 +18,14 @@
     <li <%= @sup_cat_name == "non edible" ? "class='selected'":""  %>>
       <%= link_to "Non Edible", products_page_path(:id => $non_edible_categoies, :sup_cat_name => "non edible") %>
     </li>
-    <li <%= @sup_cat_name == "other consumables" ? "class='selected'":""  %>>
-      <%= link_to "Other Consumables", products_page_path(:id => $other_consumables_categoies, :sup_cat_name => "other consumables") %>
+    <li <%= @sup_cat_name == "sweet" ? "class='selected'":""  %>>
+      <%= link_to "Sweet", products_page_path(:id => $sweet_categoies, :sup_cat_name => "sweet") %>
     </li>
     <li <%= @sup_cat_name == "savoury" ? "class='selected'":""  %>>
       <%= link_to "Savoury", products_page_path(:id => $savoury_categoies, :sup_cat_name => "savoury") %>
     </li>
-    <li <%= @sup_cat_name == "sweet" ? "class='selected'":""  %>>
-      <%= link_to "Sweet", products_page_path(:id => $sweet_categoies, :sup_cat_name => "sweet") %>
+    <li <%= @sup_cat_name == "other consumables" ? "class='selected'":""  %>>
+      <%= link_to "Other Consumables", products_page_path(:id => $other_consumables_categoies, :sup_cat_name => "other consumables") %>
     </li>
 
   </ul>
