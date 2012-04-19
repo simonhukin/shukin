@@ -19,9 +19,13 @@ class Product < ActiveRecord::Base
   def self.search(search)
     if search
      # find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-     find(:all, :joins => :category, :conditions => ['products.name ILIKE ? OR categories.name ILIKE ?', "%#{search}%", "%#{search}%"])
-     # find(:all, :conditions => ['name LIKE :search OR category_id LIKE :search OR manufacturer_id LIKE :search', {:search => "%#{search}%"}])
-
+     # ILIKE only works for Postgres which is what runs on Heroku. Change back to LIKE if you need to test on SQLLITE locally
+     if RAILS_ENV == 'development'
+       find(:all, :joins => :category, :conditions => ['products.name LIKE ? OR categories.name LIKE ?', "%#{search}%", "%#{search}%"])
+       # find(:all, :conditions => ['name LIKE :search OR category_id LIKE :search OR manufacturer_id LIKE :search', {:search => "%#{search}%"}])
+     else
+       find(:all, :joins => :category, :conditions => ['products.name ILIKE ? OR categories.name ILIKE ?', "%#{search}%", "%#{search}%"])
+     end
     else
       find(:all)
     end
