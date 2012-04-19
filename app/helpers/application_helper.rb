@@ -32,6 +32,10 @@ module ApplicationHelper
     @tick = image_tag("tick.png", :alt => "wholesale quality produce");
   end
 
+  def bakers_hat
+    @bakers_hat = image_tag("bakers_hat.png", :alt => "wholesale quality produce");
+  end
+
   def main_pic
     @main_pic = image_tag("main_pic_2.0.jpg", :alt => "Supplying local businesses with quality produce since 1874. We deliver to your door 7 days a week. Get in touch to find out more about our products and services", :class => "main_pic");
   end
