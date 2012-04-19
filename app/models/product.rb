@@ -12,6 +12,8 @@ class Product < ActiveRecord::Base
   validates :manufacturer_id, :presence => true
   validates :category_id, :presence => true
   validates :sub_category_id, :presence => true
+  validates_uniqueness_of :name, :case_sensitive => false
+
 
   default_scope :order => 'products.name ASC'
 
