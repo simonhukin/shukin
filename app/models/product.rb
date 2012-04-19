@@ -12,7 +12,6 @@ class Product < ActiveRecord::Base
   validates :manufacturer_id, :presence => true
   validates :category_id, :presence => true
   validates :sub_category_id, :presence => true
-  validates_uniqueness_of :name, :case_sensitive => false
 
 
   default_scope :order => 'products.name ASC'
@@ -20,7 +19,7 @@ class Product < ActiveRecord::Base
   def self.search(search)
     if search
      # find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-     find(:all, :joins => :category, :conditions => ['products.name LIKE ? OR categories.name LIKE ?', "%#{search}%", "%#{search}%"])
+     find(:all, :joins => :category, :conditions => ['products.name ILIKE ? OR categories.name ILIKE ?', "%#{search}%", "%#{search}%"])
      # find(:all, :conditions => ['name LIKE :search OR category_id LIKE :search OR manufacturer_id LIKE :search', {:search => "%#{search}%"}])
 
     else
