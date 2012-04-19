@@ -63,7 +63,7 @@ background-color: #fff;
 
 /*These are just styles used for the example for the content.*/
 .container_sub_left {
-	width:650px;
+	width:690px;
 	background:#fff;
 	}
 
@@ -325,7 +325,7 @@ td {
 .sup_cat_nav li a {
   color: #fff;
   display:block;
-  width: 204px;
+  width: 218px;
   font-weight: bold;
   padding: 4px;
 }
