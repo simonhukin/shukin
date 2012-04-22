@@ -29,11 +29,11 @@ module ApplicationHelper
   end
 
   def tick
-    @tick = image_tag("tick.png", :alt => "wholesale quality produce");
+    @tick = image_tag("tick.png", :alt => "wholesale produce");
   end
 
   def bakers_hat
-    @bakers_hat = image_tag("bakers_hat.png", :alt => "wholesale quality produce");
+    @bakers_hat = image_tag("bakers_hat.png", :alt => "wholesale bakers supplies");
   end
 
   def main_pic
